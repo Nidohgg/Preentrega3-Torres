@@ -1,0 +1,287 @@
+/*ARCHIVO DE ESTILOS EN SCSS*/
+
+/*RESETEO*/
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color1: black;
+
+$colorFondo1: blueviolet;
+
+$letraColor: white;
+
+$transparencia: rgba(0, 0, 0, 0.5);
+
+$hover1: rgb(113, 111, 111);
+
+/*-----------------------------------------PROPIEDADES DEL NAV------------------------------------------------------*/
+.navbar{
+    background-color: $color1;
+}
+
+.nav-item:hover{
+    background-color: $hover1;
+    border-radius: 10px;
+}
+
+.nav-link:hover{
+    color: $color1 !important;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+.f{
+    background-color: $colorFondo1;
+    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.f2{
+    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+    color: $letraColor;
+    background-size:initial;
+    background-position:top;
+    text-align: center;
+}
+
+h1{
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: $letraColor;
+    width: 100%;
+    padding: 10px;
+}
+
+.fondotransp{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+}
+
+h2{
+    background-color: $color1;
+    text-align: center;
+    color: $letraColor;
+    padding: 10px;
+    margin: 0;
+}
+
+.games{
+    display: flex;
+    justify-content: space-around;
+    background-color: $colorFondo1;
+    background-image: url(multimedia/imagen\ 3\ -\ muñecos.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 320px;
+    margin: 0;
+}
+/* cuadriculas para las pages correspondientes, novedades, audio, mercancia etc...*/
+.cuadrila_varios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 225px);
+    padding: 5px;
+    grid-gap: 5px;
+}
+
+.item{
+    border: 1px dotted $letraColor;
+    padding-top: 5px;
+    overflow:hidden;
+    color: $letraColor;
+    text-align: center;
+}
+
+.item:hover{
+    filter: grayscale(0%);
+    transform: scale(0.9);
+}
+
+.item img{
+    height: 120px;
+    width: 200px;
+}
+
+.item p{
+    color: rgb(218, 211, 211);
+    font-weight: bold;
+}
+
+footer{
+    background-color: $color1;
+    color: $hover1;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-around;
+}
+
+.redes{
+    font-size: 50px;
+    height: 60px;
+    text-align: center;
+}
+
+.redes i{
+    letter-spacing: 22px;
+    text-decoration: none;
+    padding-bottom: 15px;
+}
+
+.foot-1 a:hover{
+    color: brown;
+}
+
+.foot-1 a{
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    color: $hover1
+}
+
+div form{
+    color: $letraColor;
+    padding: 25px;
+    
+}
+
+.fondo{
+    background-color: aqua;
+    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+main{
+    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Media queries - INICIA*/
+
+@media screen and (min-width: 480px){
+    .cuadrila_varios{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4,225px);
+    }
+    
+    .item{
+        border: none;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+
+    .collapse{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #grilla{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo"
+        "parrafo parrafo parrafo ifr ifr";
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 50px 400px;
+    }
+
+    #grilla h2{
+        background-color: rgba(0, 0, 0, 0.0);
+        grid-area: titulo;
+    }
+
+    #grilla p{
+        grid-area: parrafo;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    
+    }
+    #grilla iframe{
+        grid-area: ifr;
+        justify-self: center;
+    }
+    .jumbotron iframe{
+        width: 400px;
+        height: 400px;
+    }
+
+    .f2{
+        background-size:cover;
+    }
+
+    .cuadrila_varios{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 225px 225px 225px ;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    #grilla{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo"
+        "parrafo parrafo parrafo ifr ifr";
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 50px 400px;
+    }
+    #grilla h2{
+        background-color: rgba(0, 0, 0, 0.0);
+        grid-area: titulo;
+    }
+
+    #grilla p{
+        grid-area: parrafo;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    
+    }
+    #grilla iframe{
+        grid-area: ifr;
+        justify-self: center;
+    }
+    .jumbotron iframe{
+        width: 400px;
+        height: 400px;
+    }
+    main{
+        height: 140vh;
+    }
+
+    .cuadrila_varios{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3, 225px);
+    }   
+}
+
+/*--------------------------------------------BOTON DE SUBIR-------------------------------------------------*/
+ /*.subir{
+    height: 20px;
+    width: 30px;
+    background-color: $color1;
+    color: aliceblue;
+    position: fixed; /*Se utiliza para que el obejto quede fijo en un lugar
+    right: 30px;/*Lado del que quedará fijado el objeto
+    bottom: 20px;
+    text-align: center;
+    list-style: 30px;
+    font-size: 20px;
+    box-shadow: 0 0  5px #fff;
+ }*/
