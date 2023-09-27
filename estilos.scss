@@ -12,10 +12,19 @@ $color1: black;
 $colorFondo1: blueviolet;
 
 $letraColor: white;
+$letraColor2: rgb(218, 211, 211);
 
 $transparencia: rgba(0, 0, 0, 0.5);
 
+$width1: 100%;
+$width2: 200px;
+
 $hover1: rgb(113, 111, 111);
+$hover2: brown;
+
+
+
+$fuente1: Verdana, Geneva, Tahoma, sans-serif;
 
 /*-----------------------------------------PROPIEDADES DEL NAV------------------------------------------------------*/
 .navbar{
@@ -54,14 +63,14 @@ h1{
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     color: $letraColor;
-    width: 100%;
+    width: $width1;
     padding: 10px;
 }
 
 .fondotransp{
     background-color: rgba(0, 0, 0, 0.5);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
+    font-family: $fuente1;
+    width: $width1;
 }
 
 h2{
@@ -79,13 +88,13 @@ h2{
     background-image: url(multimedia/imagen\ 3\ -\ muñecos.jpg);
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: $width1;
     height: 320px;
     margin: 0;
 }
 /* cuadriculas para las pages correspondientes, novedades, audio, mercancia etc...*/
 .cuadrila_varios{
-    width: 100%;
+    width: $width1;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 225px);
@@ -108,11 +117,11 @@ h2{
 
 .item img{
     height: 120px;
-    width: 200px;
+    width: $width2;
 }
 
 .item p{
-    color: rgb(218, 211, 211);
+    color: $letraColor2;
     font-weight: bold;
 }
 
@@ -141,7 +150,7 @@ footer{
 }
 
 .foot-1 a:hover{
-    color: brown;
+    color: $hover2;
 }
 
 .foot-1 a{
