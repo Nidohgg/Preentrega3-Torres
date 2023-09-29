@@ -1,8 +1,8 @@
 /*ARCHIVO DE ESTILOS EN SCSS*/
 
 /*RESETEO*/
-*{
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -24,24 +24,27 @@ $hover2: brown;
 
 
 
-$fuente1: Verdana, Geneva, Tahoma, sans-serif;
+$fuente1: Verdana,
+Geneva,
+Tahoma,
+sans-serif;
 
 /*-----------------------------------------PROPIEDADES DEL NAV------------------------------------------------------*/
-.navbar{
+.navbar {
     background-color: $color1;
 }
 
-.nav-item:hover{
+.nav-item:hover {
     background-color: $hover1;
     border-radius: 10px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: $color1 !important;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
-.f{
+.f {
     background-color: $colorFondo1;
     background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
     text-align: center;
@@ -51,29 +54,42 @@ $fuente1: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 50px;
 }
 
-.f2{
+.f2 {
     background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
     color: $letraColor;
-    background-size:initial;
-    background-position:top;
+    background-size: initial;
+    background-position: top;
     text-align: center;
 }
 
-h1{
+h1 {
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     color: $letraColor;
     width: $width1;
     padding: 10px;
+    animation-duration: 10s;
+    animation-name: textoAnim;
 }
 
-.fondotransp{
+@keyframes textoAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.fondotransp {
     background-color: rgba(0, 0, 0, 0.5);
     font-family: $fuente1;
     width: $width1;
 }
 
-h2{
+h2 {
     background-color: $color1;
     text-align: center;
     color: $letraColor;
@@ -81,7 +97,7 @@ h2{
     margin: 0;
 }
 
-.games{
+.games {
     display: flex;
     justify-content: space-around;
     background-color: $colorFondo1;
@@ -92,8 +108,9 @@ h2{
     height: 320px;
     margin: 0;
 }
+
 /* cuadriculas para las pages correspondientes, novedades, audio, mercancia etc...*/
-.cuadrila_varios{
+.cuadrila_varios {
     width: $width1;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -102,186 +119,211 @@ h2{
     grid-gap: 5px;
 }
 
-.item{
+.item {
     border: 1px dotted $letraColor;
     padding-top: 5px;
-    overflow:hidden;
+    overflow: hidden;
     color: $letraColor;
     text-align: center;
+    animation-duration: 10s;
+    animation-name: itemAnim;
 }
 
-.item:hover{
-    filter: grayscale(0%);
+@keyframes itemAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.item:hover {
     transform: scale(0.9);
 }
 
-.item img{
+.item img {
     height: 120px;
     width: $width2;
+
 }
 
-.item p{
-    color: $letraColor2;
+.item p {
+    color: $color1;
     font-weight: bold;
 }
 
-footer{
+footer {
     background-color: $color1;
     color: $hover1;
     text-align: center;
     padding-top: 18px;
 }
 
-.foot{
+.foot {
     display: flex;
     justify-content: space-around;
 }
 
-.redes{
+.redes {
     font-size: 50px;
     height: 60px;
     text-align: center;
 }
 
-.redes i{
+.redes i {
     letter-spacing: 22px;
     text-decoration: none;
     padding-bottom: 15px;
 }
 
-.foot-1 a:hover{
+.foot-1 a:hover {
     color: $hover2;
 }
 
-.foot-1 a{
+.foot-1 a {
     text-decoration: none;
     display: block;
     font-size: 16px;
     color: $hover1
 }
 
-div form{
+div form {
     color: $letraColor;
     padding: 25px;
-    
+
 }
 
-.fondo{
+.fondo {
     background-color: aqua;
     background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
     background-position: center;
     background-size: cover;
 }
 
-main{
-    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+main {
+    background-image: linear-gradient(black, white);
+    /*background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
 }
 
 
 /*Media queries - INICIA*/
 
-@media screen and (min-width: 480px){
-    .cuadrila_varios{
+@media screen and (min-width: 480px) {
+    .cuadrila_varios {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4,225px);
+        grid-template-rows: repeat(4, 225px);
     }
-    
-    .item{
+
+    .item {
         border: none;
     }
-    
+
 }
 
-@media screen and (min-width: 768px) and (max-width:1023px){
+@media screen and (min-width: 768px) and (max-width:1023px) {
 
-    .collapse{
+    .collapse {
         display: flex;
         justify-content: flex-end;
     }
-    #grilla{
+
+    #grilla {
         display: grid;
-        grid-template-areas: 
-        "titulo titulo titulo titulo titulo"
-        "parrafo parrafo parrafo ifr ifr";
-        grid-template-columns: repeat(5,1fr);
+        grid-template-areas:
+            "titulo titulo titulo titulo titulo"
+            "parrafo parrafo parrafo ifr ifr";
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 50px 400px;
     }
 
-    #grilla h2{
+    #grilla h2 {
         background-color: rgba(0, 0, 0, 0.0);
         grid-area: titulo;
     }
 
-    #grilla p{
+    #grilla p {
         grid-area: parrafo;
         justify-self: center;
         align-self: center;
         text-align: center;
-    
+
     }
-    #grilla iframe{
+
+    #grilla iframe {
         grid-area: ifr;
         justify-self: center;
     }
-    .jumbotron iframe{
+
+    .jumbotron iframe {
         width: 400px;
         height: 400px;
     }
 
-    .f2{
-        background-size:cover;
+    .f2 {
+        background-size: cover;
     }
 
-    .cuadrila_varios{
+    .cuadrila_varios {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 225px 225px 225px ;
+        grid-template-rows: 225px 225px 225px;
     }
-    
+
+    main {
+        height: 150vh;
+    }
+
 }
 
-@media screen and (min-width: 1024px) {
-    #grilla{
+@media screen and (width: 1024px) {
+    #grilla {
         display: grid;
-        grid-template-areas: 
-        "titulo titulo titulo titulo titulo"
-        "parrafo parrafo parrafo ifr ifr";
-        grid-template-columns: repeat(5,1fr);
+        grid-template-areas:
+            "titulo titulo titulo titulo titulo"
+            "parrafo parrafo parrafo ifr ifr";
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 50px 400px;
     }
-    #grilla h2{
+
+    #grilla h2 {
         background-color: rgba(0, 0, 0, 0.0);
         grid-area: titulo;
     }
 
-    #grilla p{
+    #grilla p {
         grid-area: parrafo;
         justify-self: center;
         align-self: center;
         text-align: center;
-    
+
     }
-    #grilla iframe{
+
+    #grilla iframe {
         grid-area: ifr;
         justify-self: center;
     }
-    .jumbotron iframe{
+
+    .jumbotron iframe {
         width: 400px;
         height: 400px;
     }
-    main{
-        height: 140vh;
+
+    main {
+        height: 90vh;
     }
 
-    .cuadrila_varios{
-        grid-template-columns: repeat(4,1fr);
+    .cuadrila_varios {
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 225px);
-    }   
+    }
 }
 
 /*--------------------------------------------BOTON DE SUBIR-------------------------------------------------*/
- /*.subir{
+/*.subir{
     height: 20px;
     width: 30px;
     background-color: $color1;

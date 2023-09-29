@@ -46,8 +46,18 @@ h1 {
   color: white;
   width: 100%;
   padding: 10px;
+  animation-duration: 10s;
+  animation-name: textoAnim;
 }
 
+@keyframes textoAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .fondotransp {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -90,10 +100,19 @@ h2 {
   overflow: hidden;
   color: white;
   text-align: center;
+  animation-duration: 10s;
+  animation-name: itemAnim;
 }
 
+@keyframes itemAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .item:hover {
-  filter: grayscale(0%);
   transform: scale(0.9);
 }
 
@@ -103,7 +122,7 @@ h2 {
 }
 
 .item p {
-  color: rgb(218, 211, 211);
+  color: black;
   font-weight: bold;
 }
 
@@ -155,9 +174,10 @@ div form {
 }
 
 main {
-  background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+  background-image: linear-gradient(black, white);
+  /*background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
 }
 
 /*Media queries - INICIA*/
@@ -206,8 +226,11 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 225px 225px 225px;
   }
+  main {
+    height: 150vh;
+  }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (width: 1024px) {
   #grilla {
     display: grid;
     grid-template-areas: "titulo titulo titulo titulo titulo" "parrafo parrafo parrafo ifr ifr";
@@ -233,7 +256,7 @@ main {
     height: 400px;
   }
   main {
-    height: 140vh;
+    height: 90vh;
   }
   .cuadrila_varios {
     grid-template-columns: repeat(4, 1fr);
@@ -242,17 +265,17 @@ main {
 }
 /*--------------------------------------------BOTON DE SUBIR-------------------------------------------------*/
 /*.subir{
-   height: 20px;
-   width: 30px;
-   background-color: $color1;
-   color: aliceblue;
-   position: fixed; /*Se utiliza para que el obejto quede fijo en un lugar
-   right: 30px;/*Lado del que quedará fijado el objeto
-   bottom: 20px;
-   text-align: center;
-   list-style: 30px;
-   font-size: 20px;
-   box-shadow: 0 0  5px #fff;
-}*/
+    height: 20px;
+    width: 30px;
+    background-color: $color1;
+    color: aliceblue;
+    position: fixed; /*Se utiliza para que el obejto quede fijo en un lugar
+    right: 30px;/*Lado del que quedará fijado el objeto
+    bottom: 20px;
+    text-align: center;
+    list-style: 30px;
+    font-size: 20px;
+    box-shadow: 0 0  5px #fff;
+ }*/
 
 /*# sourceMappingURL=estilos.css.map */
