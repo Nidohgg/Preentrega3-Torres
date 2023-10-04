@@ -41,7 +41,6 @@
 }
 
 h1 {
-  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
   width: 100%;
@@ -138,16 +137,26 @@ footer {
   justify-content: space-around;
 }
 
-.redes {
+.redes a {
   font-size: 50px;
   height: 60px;
   text-align: center;
+  color: rgb(113, 111, 111);
 }
 
 .redes i {
   letter-spacing: 22px;
   text-decoration: none;
-  padding-bottom: 15px;
+  padding-top: 20px;
+}
+
+.redes i:hover {
+  transform: scale(0.9);
+}
+
+/*Efecto de hover en iconos de redes sociales*/
+.redes a:hover {
+  color: red;
 }
 
 .foot-1 a:hover {
@@ -201,8 +210,7 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 50px 400px;
   }
-  #grilla h2 {
-    background-color: rgba(0, 0, 0, 0);
+  #grilla h1 {
     grid-area: titulo;
   }
   #grilla p {
@@ -230,15 +238,18 @@ main {
     height: 150vh;
   }
 }
-@media screen and (width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .collapse {
+    display: flex;
+    justify-content: flex-end;
+  }
   #grilla {
     display: grid;
-    grid-template-areas: "titulo titulo titulo titulo titulo" "parrafo parrafo parrafo ifr ifr";
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "titulo titulo titulo titulo titulo " "parrafo parrafo  ifr ifr ifr";
+    grid-template-columns: repeat(5, 2fr);
     grid-template-rows: 50px 400px;
   }
-  #grilla h2 {
-    background-color: rgba(0, 0, 0, 0);
+  #grilla h1 {
     grid-area: titulo;
   }
   #grilla p {
@@ -249,11 +260,16 @@ main {
   }
   #grilla iframe {
     grid-area: ifr;
+    padding-top: 10px;
+    padding-bottom: 10px;
     justify-self: center;
   }
   .jumbotron iframe {
-    width: 400px;
+    width: 90%;
     height: 400px;
+  }
+  .f2 {
+    background-size: cover;
   }
   main {
     height: 90vh;
@@ -264,18 +280,5 @@ main {
   }
 }
 /*--------------------------------------------BOTON DE SUBIR-------------------------------------------------*/
-/*.subir{
-    height: 20px;
-    width: 30px;
-    background-color: $color1;
-    color: aliceblue;
-    position: fixed; /*Se utiliza para que el obejto quede fijo en un lugar
-    right: 30px;/*Lado del que quedará fijado el objeto
-    bottom: 20px;
-    text-align: center;
-    list-style: 30px;
-    font-size: 20px;
-    box-shadow: 0 0  5px #fff;
- }*/
 
 /*# sourceMappingURL=estilos.css.map */
