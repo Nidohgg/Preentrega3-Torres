@@ -22,6 +22,7 @@
 }
 
 /*-----------------------------------------------------------------------------------------------*/
+/*Fondo de principal*/
 .f {
   background-color: blueviolet;
   background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
@@ -60,7 +61,13 @@ h1 {
 .fondotransp {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
   width: 100%;
+}
+
+.fondotransp p {
+  color: white;
+  text-align: center;
 }
 
 h2 {
@@ -94,7 +101,7 @@ h2 {
 }
 
 .item {
-  border: 1px dotted white;
+  border: 5px solid white;
   padding-top: 5px;
   overflow: hidden;
   color: white;
@@ -106,6 +113,9 @@ h2 {
 @keyframes itemAnim {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0, 5;
   }
   100% {
     opacity: 1;
@@ -121,7 +131,7 @@ h2 {
 }
 
 .item p {
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -156,7 +166,7 @@ footer {
 
 /*Efecto de hover en iconos de redes sociales*/
 .redes a:hover {
-  color: red;
+  color: brown;
 }
 
 .foot-1 a:hover {
@@ -183,20 +193,23 @@ div form {
 }
 
 main {
-  background-image: linear-gradient(black, white);
-  /*background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
-  background-size: cover;
-  background-position: center;*/
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(121, 9, 9) 35%, rgb(255, 183, 0) 100%);
 }
 
 /*Media queries - INICIA*/
 @media screen and (min-width: 480px) {
   .cuadrila_varios {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 225px);
   }
   .item {
-    border: none;
+    border: 1px solid white;
+  }
+  main {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(121, 9, 9) 35%, rgb(255, 183, 0) 100%);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -231,8 +244,12 @@ main {
     background-size: cover;
   }
   .cuadrila_varios {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 225px 225px 225px;
+  }
+  .item {
+    border: 1px solid white;
   }
   main {
     height: 150vh;
@@ -275,8 +292,12 @@ main {
     height: 90vh;
   }
   .cuadrila_varios {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 225px);
+  }
+  .item {
+    border: 1px solid white;
   }
 }
 /*--------------------------------------------BOTON DE SUBIR-------------------------------------------------*/
