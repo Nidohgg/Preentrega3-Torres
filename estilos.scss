@@ -40,7 +40,7 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
 
 /*-----------------------------------------------------------------------------------------------*/
 /*Fondo de principal*/
-.f {
+.f{
     background-color: $colorFondo1;
     background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
     text-align: center;
@@ -50,7 +50,7 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
     padding-bottom: 50px;
 }
 
-.f2 {
+.f2{
     background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
     color: $letraColor;
     background-size: initial;
@@ -58,7 +58,7 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
     text-align: center;
 }
 
-h1 {
+h1{
     
     text-align: center;
     text-shadow: 5px 5px 5px black;
@@ -93,7 +93,7 @@ h1 {
     text-align: center;
 }
 
-h2 {
+h2{
     background-color: $color1;
     text-align: center;
     color: $letraColor;
@@ -133,6 +133,21 @@ h2 {
     animation-name: itemAnim;
 }
 
+/*CARDS*/
+.card{
+    width: 15%;
+    background-color: rgb(235, 235, 235);
+}
+
+.card__img{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*Animacion para aparicion de ITEMS*/
 @keyframes itemAnim {
     0% {
         opacity: 0;
@@ -170,7 +185,7 @@ footer {
     padding-top: 18px;
 }
 
-.foot {
+.foot{
     display: flex;
     justify-content: space-around;
 }
@@ -182,7 +197,7 @@ footer {
     color: $hover1;
 }
 
-.redes i {
+.redes i{
     letter-spacing: 22px;
     text-decoration: none;
     padding-top: 20px;
@@ -197,18 +212,18 @@ footer {
 
 }
 
-.foot-1 a:hover {
+.foot-1 a:hover{
     color: $hover2;
 }
 
-.foot-1 a {
+.foot-1 a{
     text-decoration: none;
     display: block;
     font-size: 16px;
     color: $hover1
 }
 
-div form {
+div form{
     color: $letraColor;
     padding: 25px;
 
@@ -298,7 +313,7 @@ main {
     }
 
     main {
-        height: 150vh;
+        height: 100vh;
     }
 
 }

@@ -111,6 +111,19 @@ h2 {
   animation-name: itemAnim;
 }
 
+/*CARDS*/
+.card {
+  width: 15%;
+  background-color: rgb(235, 235, 235);
+}
+
+.card__img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Animacion para aparicion de ITEMS*/
 @keyframes itemAnim {
   0% {
     opacity: 0;
@@ -253,7 +266,7 @@ main {
     border: 1px solid white;
   }
   main {
-    height: 150vh;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 1024px) {
