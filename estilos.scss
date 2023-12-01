@@ -58,6 +58,11 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
     text-align: center;
 }
 
+main {
+    background: white;
+}
+
+
 h1{
     
     text-align: center;
@@ -236,10 +241,6 @@ div form{
     background-size: cover;
 }
 
-main {
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,183,0,1) 100%);
-}
 
 
 /*Media queries - INICIA*/

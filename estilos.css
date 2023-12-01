@@ -41,10 +41,14 @@
   text-align: center;
 }
 
+main {
+  background: white;
+}
+
 h1 {
   text-align: center;
   text-shadow: 5px 5px 5px black;
-  color: white;
+  color: black;
   width: 100%;
   padding: 10px;
   animation-duration: 10s;
@@ -206,10 +210,7 @@ div form {
   background-size: cover;
 }
 
-main {
-  background: rgb(2, 0, 36);
-  background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(121, 9, 9) 35%, rgb(255, 183, 0) 100%);
-}
+
 
 /*Media queries - INICIA*/
 @media screen and (min-width: 480px) {
