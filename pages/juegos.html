@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--SEO INICIA-->
     <meta name="description" content="Juegos de playstation, ultimos lanzamientos">
-    <meta name="keywords" content="Juegos, games, gamer, Final Fantasy, Star wars, Far cry, kirby, Bloodborne, PS4, PS5, XBOX, Reident Evil, Dragon Ball, Ps2, PC, Bloodborne">
+    <meta name="keywords"
+        content="Juegos, games, gamer, Final Fantasy, Star wars, Far cry, kirby, Bloodborne, PS4, PS5, XBOX, Reident Evil, Dragon Ball, Ps2, PC, Bloodborne">
     <!--SEO FIN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -15,8 +16,8 @@
     <!--Logo de head-->
     <link rel="shortcut icon" href="../multimedia/Logo.png" type="image/x-icon">
     <!--BS 5.1 INICIA-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        
     <!--BS 5.1 FIN-->
     <link rel="stylesheet" href="../estilos.css">
     <!--<link rel="stylesheet" href="normalize.css">-->
@@ -55,81 +56,59 @@
     </nav>
 
 
-    <main >
+    <main>
         <h1>Juegos</h1>
-
-        <section id="contenedorJuegos" class="d-flex flex-wrap">
-
-        </section>
+        <!--Input donde el usuario buscara el producto que desea-->
+        <input type="text" id="buscarArticulos" placeholder="Buscar juego">
 
 
+        <!--div donde se mostrara los juegos a la venta-->
+        <div id="contenedorJuegos" class="d-flex flex-wrap">
 
+        </div>
 
-<!--
-        <section class="cuadrila_varios">
-            <div class="item item1">
-                <img src="../multimedia/juego3.jpg" alt="Kirby">
-                <h5>Kirby - Nintendo Switch</h5>
-                <p>Lorem, ipsum dolor sit amet Quibusdam, soluta.</p>
-            </div>
-            <div class="item item2">
-                <img src="../multimedia/juego2.jpg" alt="Jedi">
-                <h5>Star Wars JEDI Fallen the Fallen Order - PS5</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item3">
-                <img src="../multimedia/juego4.png" alt="dead cells">
-                <h5>Dead and Cells - Nintendo Switch</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item4">
-                <img src="../multimedia/juego5.jpg" alt="Uncharted 4">
-                <h5>Uncharted 4 - PS4</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item5">
-                <img src="../multimedia/Juego6.jpg" alt="Uncharted the lost legacy">
-                <h5>Uncharted: A lost legacy - PS4</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item6">
-                <img src="../multimedia/Juego7.jpg" alt="Farcry 6">
-                <h5>Far Cry 6 - XBOX </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item7">
-                <img src="../multimedia/juego8.jpg" alt="Modern Warfare 3">
-                <h5>CoD Modern Warfare III - PS4</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item8">
-                <img src="../multimedia/Juego1.jpg" alt="Dragon ball sagas">
-                <h5>Dragon Ball Sagas - PC</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
+        <!-- MODAL PARA CARRITO DE COMPRAS-->
 
-            <div class="item item9">
-                <img src="../multimedia/Juego9.jpg" alt="Sifu">
-                <h5>Sifu PS5</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carritoModal">
+            Ver Carrito
+        </button>
+
+        <!--modal fade:Estas clases son proporcionadas por Bootstrap para dar estilos al modal y controlar su animación de entrada/salida.-->
+        <!--tabindex="-1": Establece el orden de tabulación del modal. Un valor de -1 significa que el modal no es alcanzable mediante la navegación por teclado estándar.-->
+        
+        <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true"><!--contendor principal del modal--> 
+            <div class="modal-dialog" role="document"><!--Modaldialog proporciona estilos de diseño para el dialogo, roledocument indica el papel semantico del contenedor-->
+                <div class="modal-content"><!--Contiene el contenido del modal-->
+                    <div class="modal-header"><!--Encabezado del modal-->
+
+                        <h5 class="modal-tittle" id="carritoModalLabel"> Carrito de compras</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                    </div><!--fin del header del modal-->
+
+                    <div class="modal-body"><!--Cuerpo del modal-->
+
+                        <ul id="listaCarrito" class="list-group"><!---->
+                            <!--Los productos que sean agregados al carrito apareceran aqui en forma de lista-->
+                        </ul>
+
+                    </div><!--FIn de modal-body-->
+
+                    <div class="modal-footer"><!--Pie del modal-->
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar</button> <!--boton para cerrar el modal y seguir comprando-->
+                        <button type="button" class="btn btn-primary">Finalizar Compra</button><!--Boton para ir a pagar-->
+
+                    </div><!--Final de pie del modal-->
+
+                </div>
             </div>
-            <div class="item item10">
-                <img src="../multimedia/juego10.jpg" alt="Bloodborne">
-                <h5>Bloodborne PS4</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item11">
-                <img src="../multimedia/juego11.jpg" alt="Resident evil 2">
-                <h5>Resident Evil 2</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-            <div class="item item12">
-                <img src="../multimedia/juego12.jpg" alt="Resident evil village">
-                <h5>Resident Evil Village PS5</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, soluta?</p>
-            </div>
-        </section>
--->
+        </div>
+
+   
+
     </main>
 
     <footer class="container-fluid ">
@@ -143,16 +122,14 @@
             </div>
 
             <div class="col-sm-4 redes">
-                <a href="https://twitter.com/home?lang=es" target="_blank"><i class="fa-brands fa-square-x-twitter"
-                        ></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"
-                        ></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"
-                        ></i></a>
+                <a href="https://twitter.com/home?lang=es" target="_blank"><i
+                        class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
             </div>
 
             <div class="col-sm-4 foot-1">
-                <strong> NOSOTROS</strong>
+                <strong>NOSOTROS</strong>
                 <a href="/pages/formularioRegister.html">Registrate</a>
                 <a href="/pages/contacto.html">Contacto</a>
 
@@ -163,15 +140,12 @@
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
 
-<!--Codigo de JS con app de carrito de compras-->
+<!-- Finalmente, incluye Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!--Codigo de JS con app de carrito de compras-->
     <script src="../JS/carritoJuegos.js"></script>
 </body>
 

@@ -25,7 +25,7 @@
 /*Fondo de principal*/
 .f {
   background-color: blueviolet;
-  background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+  background-image: url(./multimedia/FONDO/FONDO\ MAIN\ 2.jpg);
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -34,7 +34,7 @@
 }
 
 .f2 {
-  background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+  background-image: url(./multimedia/FONDO/imagen\ 3\ -\ muñecos.jpg);
   color: white;
   background-size: initial;
   background-position: top;
@@ -43,7 +43,16 @@
 
 main {
   background-color: white;
+  overflow: scroll;
 }
+
+
+/*estilos propiedades para JS*/
+.divProducto {
+  margin-bottom: 60px; /* Ajusta el valor según sea necesario */
+}
+
+/*-------------------------------------------------*/
 
 h1 {
   text-align: center;
@@ -87,7 +96,7 @@ h2 {
   display: flex;
   justify-content: space-around;
   background-color: blueviolet;
-  background-image: url(multimedia/imagen\ 3\ -\ muñecos.jpg);
+  background-image: url(./multimedia/FONDO/imagen\ 3\ -\ muñecos.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -111,20 +120,6 @@ h2 {
   overflow: hidden;
   color: white;
   text-align: center;
-  animation-duration: 10s;
-  animation-name: itemAnim;
-}
-
-/*CARDS*/
-.card {
-  width: 15%;
-  background-color: rgb(235, 235, 235);
-}
-
-.card__img {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
 }
 
 /*Animacion para aparicion de ITEMS*/
@@ -153,11 +148,14 @@ h2 {
   font-weight: bold;
 }
 
+
 footer {
   background-color: black;
   color: rgb(113, 111, 111);
   text-align: center;
   padding-top: 18px;
+  clear: both;
+  
 }
 
 .foot {
@@ -266,6 +264,7 @@ div form {
     border: 1px solid white;
   }
   main {
+    display: grid;
     height: 100vh;
   }
 }

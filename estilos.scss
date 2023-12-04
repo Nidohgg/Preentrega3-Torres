@@ -42,7 +42,7 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
 /*Fondo de principal*/
 .f{
     background-color: $colorFondo1;
-    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+    background-image: url(./multimedia/FONDO/FONDO\ MAIN\ 2.jpg);
     text-align: center;
     background-size: cover;
     background-position: center;
@@ -51,7 +51,7 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
 }
 
 .f2{
-    background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+    background-image: url(./multimedia/FONDO/imagen\ 3\ -\ muñecos.jpg);
     color: $letraColor;
     background-size: initial;
     background-position: top;
@@ -60,6 +60,10 @@ $fuente1: Verdana,Geneva,Tahoma,sans-serif;
 
 main {
     background-color: white;
+}
+
+.divProducto {
+    margin-bottom: 20px; 
 }
 
 
@@ -188,6 +192,7 @@ footer {
     color: $hover1;
     text-align: center;
     padding-top: 18px;
+    clear: both;
 }
 
 .foot{
