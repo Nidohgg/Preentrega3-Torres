@@ -56,10 +56,10 @@
     </nav>
 
 
-    <main>
+    <main class="fondo3">
         <h1>Juegos</h1>
         <!--Input donde el usuario buscara el producto que desea-->
-        <input type="text" id="buscarArticulos" placeholder="Buscar juego">
+        <input type="text" id="buscarArticulos" class="form-control" placeholder="Buscar juego" aria-label="Username" aria-describedby="basic-addon1">
 
 
         <!--div donde se mostrara los juegos a la venta-->
@@ -69,13 +69,13 @@
 
         <!-- MODAL PARA CARRITO DE COMPRAS-->
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carritoModal">
+        <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#carritoModal">
             Ver Carrito
         </button>
 
         <!--modal fade:Estas clases son proporcionadas por Bootstrap para dar estilos al modal y controlar su animación de entrada/salida.-->
         <!--tabindex="-1": Establece el orden de tabulación del modal. Un valor de -1 significa que el modal no es alcanzable mediante la navegación por teclado estándar.-->
-        
+
         <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true"><!--contendor principal del modal--> 
             <div class="modal-dialog" role="document"><!--Modaldialog proporciona estilos de diseño para el dialogo, roledocument indica el papel semantico del contenedor-->
                 <div class="modal-content"><!--Contiene el contenido del modal-->
@@ -117,7 +117,8 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.983764272232!2d-58.38171967013684!3d-34.60498260174846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1692577090242!5m2!1ses-419!2sar"
                     width="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
 
             </div>
 

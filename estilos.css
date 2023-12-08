@@ -41,11 +41,45 @@
   text-align: center;
 }
 
+.fondo3{
+  background-image: url(./multimedia/FONDO/FONDO3.jpg);
+  background-size: cover;
+  background-position: center;
+}
 main {
   background-color: white;
   overflow: scroll;
 }
+.form-control {
+  display: block;
+  align-items: center;
+  width: 400px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
+#contenedorJuegos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-text{
+  text-align: left;
+}
+.card-body{
+  text-align: center;
+}
 
 /*estilos propiedades para JS*/
 .divProducto {
@@ -57,7 +91,7 @@ main {
 h1 {
   text-align: center;
   text-shadow: 5px 5px 5px black;
-  color: black;
+  color: white;
   width: 100%;
   padding: 10px;
   animation-duration: 10s;

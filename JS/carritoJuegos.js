@@ -1,32 +1,57 @@
 console.log("Conectado");
 
-//array donde se guardaran los productos seleccionados
-let carrito = [];
+//El carrito inicializa desde LocalStorage, Si no contiene datos, se incializa el carrito como un array vacio
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-//Si se agrego al menos 1 elemento al carrito el la pagina informa que se puede ir a pagar
-if(carrito.length >= 1){
-    alert("Ir a pagar");
-}else{
-    console.log("Usuario prefiere seguir viendo productos.");
-}
+//Se actualiza la lista del carrito
+actualizarListaCarrito();
+
+//array de Videojuegos a vender 
+const videojuegos = [
+
+    {nombre: "Kirby - Nintendo Switch", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego3.jpg"},
+    {nombre: "Star Wars JEDI Fallen the Fallen Order - PS5", precio: 28000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego2.jpg"},
+    {nombre: "Dead and Cells - Nintendo Switch", precio: 21000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego4.png"},
+    {nombre: "Uncharted 4 - PS4", precio: 19000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego5.jpg"},
+    {nombre: "Uncharted: A lost legacy - PS4", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego6.jpg"},
+    {nombre: "Far Cry 6 - XBOX ", precio: 23000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego7.jpg"},
+    {nombre: "CoD Modern Warfare III - PS4", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego8.jpg"},
+    {nombre: "Dragon Ball Sagas - PC", precio: 3000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego1.jpg"},
+    {nombre: "Sifu PS5", precio: 26000, descripcion: "insertar descripcion",  img:"../multimedia/JUEGOS/Juego9.jpg"},
+    {nombre: "Bloodborne PS4", precio: 15000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego10.jpg"},
+    {nombre: "Resident Evil 2 - PS4", precio: 25000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego11.jpg"},
+    {nombre: "Resident Evil Village PS5", precio: 26000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego12.jpg"},
+
+]
+
+
+function guardarCarritoLocalStorage(){
+    //mandar al local
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+
 
 function agregarAlCarrito(nombre, precio){
 
     //Agregar el producto al array del carrito
     carrito.push({ nombre, precio });
 
-    //Actualiza lña lsita del modal
+    //Actualiza la lsita del modal
     actualizarListaCarrito();
 
     //Muestra el modal
     mostrarModal();
+
+    guardarCarritoLocalStorage();
 }
 
 function mostrarModal(){
 
     const modalElement = document.getElementById('carritoModal');
-    const modal = new bootstrap.Modal(modalElement);
-    modal.show();
+
+    const modal = new bootstrap.Modal(modalElement);//Se crea una nueva instancia de la clase Modal proporcionada por Bootstrap, utilizando el elemento del DOM como parámetro. Esto prepara el modal para ser manipulado programáticamente.
+
+    modal.show();//el metodo show hace que el modal sea visible en la interfaz del usuario, mostrandolo en pantalla
 
 }
 
@@ -50,26 +75,8 @@ function actualizarListaCarrito(){
 function eliminarDelCarrito(index){
     carrito.splice(index, 1);//Elimina el elemento del array
     actualizarListaCarrito()//Actualiza la lista en el modal;
+    guardarCarritoLocalStorage();
 }
-
-//array de Videojuegos a vender 
-const videojuegos = [
-
-    {nombre: "Kirby - Nintendo Switch", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego3.jpg"},
-    {nombre: "Star Wars JEDI Fallen the Fallen Order - PS5", precio: 28000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego2.jpg"},
-    {nombre: "Dead and Cells - Nintendo Switch", precio: 21000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego4.png"},
-    {nombre: "Uncharted 4 - PS4", precio: 19000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego5.jpg"},
-    {nombre: "Uncharted: A lost legacy - PS4", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego6.jpg"},
-    {nombre: "Far Cry 6 - XBOX ", precio: 23000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego7.jpg"},
-    {nombre: "CoD Modern Warfare III - PS4", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego8.jpg"},
-    {nombre: "Dragon Ball Sagas - PC", precio: 3000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego1.jpg"},
-    {nombre: "Sifu PS5", precio: 26000, descripcion: "insertar descripcion",  img:"../multimedia/JUEGOS/Juego9.jpg"},
-    {nombre: "Bloodborne PS4", precio: 15000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego10.jpg"},
-    {nombre: "Resident Evil 2 - PS4", precio: 25000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego11.jpg"},
-    {nombre: "Resident Evil Village PS5", precio: 26000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego12.jpg"},
-
-]
-
 
 //funcion para revelar los juegos de consolas
 function mostrarArticulos(productosFiltrados){
@@ -79,14 +86,14 @@ function mostrarArticulos(productosFiltrados){
         const divProducto = document.createElement("div");//Se crea el nodo tipo elemento con la etiqueta section
 
         divProducto.classList.add("card", "m-2");//Se le agregan las clases de Boostrap,(como lo son las cards) desde JS en vez de html
-        divProducto.style.width = "11rem";
+        divProducto.style.width = "16rem";
 
         divProducto.innerHTML = `
             <div class="card-body">
-                <h5 class="card-title">${videojuegos.nombre}</h5>
                 <img src="${videojuegos.img}" class="card-img-top" alt="${videojuegos.nombre}">
-                <p class="card-text">Valor: ${videojuegos.precio}</p>
-                <p class="card-tex">${videojuegos.descripcion}</p>
+                <h5 class="card-title">${videojuegos.nombre}</h5>
+                <p class="card-text">$ ${videojuegos.precio}</p>
+                <p class="card-text">${videojuegos.descripcion}</p>
                 <button class="btn btn-primary" onclick="agregarAlCarrito('${videojuegos.nombre}', ${videojuegos.precio})">Agregar al carrito</button>
             </div>
         `;
