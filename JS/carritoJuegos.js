@@ -3,6 +3,8 @@ console.log("Conectado");
 //El carrito inicializa desde LocalStorage, Si no contiene datos, se incializa el carrito como un array vacio
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+carrito.length === 0 && console.log("El carrito se encuentra vacio!");
+
 //Se actualiza la lista del carrito
 actualizarListaCarrito();
 
@@ -24,6 +26,11 @@ const videojuegos = [
 
 ]
 
+//DESESTRUCTURACION DE OBJECTO VIDEOJUEGOS
+
+const {nombre, precio, descripcion, img} = videojuegos;
+
+
 
 function guardarCarritoLocalStorage(){
     //mandar al local
@@ -32,6 +39,9 @@ function guardarCarritoLocalStorage(){
 
 
 function agregarAlCarrito(nombre, precio){
+
+
+    console.log(videojuegos?.nombre || "El juego existe");
 
     //Agregar el producto al array del carrito
     carrito.push({ nombre, precio });
@@ -90,7 +100,7 @@ function mostrarArticulos(productosFiltrados){
 
         divProducto.innerHTML = `
             <div class="card-body">
-                <img src="${videojuegos.img}" class="card-img-top" alt="${videojuegos.nombre}">
+                <img src="${videojuegos.img}" class="card-img-top" alt="${videojuegos.nombre}" style="width:222px; height: 280px;">
                 <h5 class="card-title">${videojuegos.nombre}</h5>
                 <p class="card-text">$ ${videojuegos.precio}</p>
                 <p class="card-text">${videojuegos.descripcion}</p>

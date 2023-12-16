@@ -69,10 +69,6 @@
 
         <!-- MODAL PARA CARRITO DE COMPRAS-->
 
-        <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#carritoModal">
-            Ver Carrito
-        </button>
-
         <!--modal fade:Estas clases son proporcionadas por Bootstrap para dar estilos al modal y controlar su animación de entrada/salida.-->
         <!--tabindex="-1": Establece el orden de tabulación del modal. Un valor de -1 significa que el modal no es alcanzable mediante la navegación por teclado estándar.-->
 
@@ -107,7 +103,12 @@
             </div>
         </div>
 
-   
+        <!--boton para acceder al carrito y ver lo que se tiene seleccionado-->
+        <div class="button-float">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                <i class="fa-brands fa-shopify"></i>
+            </button>
+        </div>
 
     </main>
 
