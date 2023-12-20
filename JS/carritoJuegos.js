@@ -31,7 +31,6 @@ const videojuegos = [
 const {nombre, precio, descripcion, img} = videojuegos;
 
 
-
 function guardarCarritoLocalStorage(){
     //mandar al local
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -40,17 +39,31 @@ function guardarCarritoLocalStorage(){
 
 function agregarAlCarrito(nombre, precio){
 
+    //Verificar si el producto ya existe dentro del carrito
+    const productoExiste = carrito.find(videojuego => videojuego.nombre === nombre);
 
-    console.log(videojuegos?.nombre || "El juego existe");
+    if(productoExiste){
+        //Si el producto ya está en el carrito, actualiza la cantidad o realiza la lógica que desees
+        productoExiste.cantidad = (productoExiste.cantidad || 1) + 1;
+        productoExiste.precio = productoExiste.precio + precio;
+    }else{
+        //Si el producto no se encuentra en el carrito, hay que agregarlo
+        carrito.push({ nombre, precio, cantidad: 1});
+    }
 
-    //Agregar el producto al array del carrito
-    carrito.push({ nombre, precio });
+    Toastify({
+        text: "Producto agregado al carrito.",
+        className: "info",
+        duration: 2000,
+        gravity: "top", 
+        position: "center",
+        style: {
+          background: "linear-gradient(to right, #f58888, #571818)",
+        }
+      }).showToast();
 
-    //Actualiza la lsita del modal
+    //Actualiza la lista del modal
     actualizarListaCarrito();
-
-    //Muestra el modal
-    mostrarModal();
 
     guardarCarritoLocalStorage();
 }
@@ -76,7 +89,7 @@ function actualizarListaCarrito(){
 
         item.classList.add('list-group-item');
 
-        item.innerHTML = `${videojuego.nombre} - ARS  ${videojuego.precio}  <span class="fas fa-trash-alt float-right" style="cursor: pointer;" onclick="eliminarDelCarrito(${index})"></span>`;
+        item.innerHTML = `${videojuego.nombre}<br> Cant: ${videojuego.cantidad}<br> ARS  ${videojuego.precio}  <span class="fas fa-trash-alt float-right" style="cursor: pointer;" onclick="eliminarDelCarrito(${index})"></span>`;
 
         listaCarrito.appendChild(item);
     })
@@ -113,7 +126,6 @@ function mostrarArticulos(productosFiltrados){
 
     });
 }
-
 
 
 //Funcion para buscar los objetos basado en lo que escribe el usuario
