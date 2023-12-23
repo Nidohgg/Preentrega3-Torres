@@ -1,4 +1,3 @@
-console.log("Conectado");
 
 //El carrito inicializa desde LocalStorage, Si no contiene datos, se incializa el carrito como un array vacio
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -25,6 +24,7 @@ const videojuegos = [
     {nombre: "Resident Evil Village PS5", precio: 26000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego12.jpg"},
 
 ]
+
 
 //DESESTRUCTURACION DE OBJECTO VIDEOJUEGOS
 
