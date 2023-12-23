@@ -1,0 +1,99 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Kirby - Nintendo Switch",
+        "precio": 20000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego3.jpg"
+
+    },
+    {
+        "id": 2,
+        "nombre": "Star Wars JEDI Fallen the Fallen Order - PS5",
+        "precio": 28000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego2.jpg"
+
+    },
+    {
+        "id": 3,
+        "nombre": "Dead and Cells - Nintendo Switch",
+        "precio": 21000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego4.png"
+
+    },
+    {
+        "id": 4,
+        "nombre": "Uncharted 4 - PS4",
+        "precio": 19000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego5.jpg"
+
+    },
+    {
+        "id": 5,
+        "nombre": "Uncharted: A lost legacy - PS4",
+        "precio": 20000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/Juego6.jpg"
+
+    },
+    {
+        "id": 6,
+        "nombre": "Far Cry 6 - XBOX ",
+        "precio": 23000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/Juego7.jpg"
+
+    },
+    {
+        "id": 7,
+        "nombre": "CoD Modern Warfare III - PS4",
+        "precio": 20000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego8.jpg"
+
+    },
+    {
+        "id": 8,
+        "nombre": "Dragon Ball Sagas - PC",
+        "precio": 3000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/Juego1.jpg"
+
+    },
+    {
+        "id": 9,
+        "nombre": "Sifu PS4",
+        "precio": 26000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/Juego9.jpg"
+
+    },
+    {
+        "id": 10,
+        "nombre": "Bloodborne PS4",
+        "precio": 15000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego10.jpg"
+
+    },
+    {
+        "id": 11,
+        "nombre": "Resident Evil 2 - PS4",
+        "precio": 25000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego11.jpg"
+
+    },
+    {
+        "id": 12,
+        "nombre": "Resident Evil Village PS5",
+        "precio": 26000,
+        "descripcion": "insertar descripcion",
+        "img": "../multimedia/JUEGOS/juego12.jpg"
+
+    }
+]

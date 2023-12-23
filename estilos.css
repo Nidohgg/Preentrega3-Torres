@@ -49,6 +49,8 @@
 main {
   background-color: white;
   overflow:auto;
+  height: 100vh;
+
 }
 .form-control {
   display:block;
@@ -136,13 +138,18 @@ h1 {
 .fondotransp {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
-  width: 100%;
-}
-
-.fondotransp p {
+  font-size: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta la altura según sea necesario */
   color: white;
   text-align: center;
+}
+
+.fondotransp form{
+  text-align: left;
 }
 
 h2 {
@@ -264,15 +271,13 @@ div form {
 
 .fondo {
   background-color: aqua;
-  background-image: url(multimedia/FONDO\ MAIN\ 2.jpg);
+  background-image: url(./multimedia/FONDO/FONDO\ MAIN\ 2.jpg);
   background-position: center;
   background-size: cover;
 }
 
-
-
 /*Media queries - INICIA*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767)  {
   .cuadrila_varios {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -283,6 +288,7 @@ div form {
   }
   main {
     background-color: white;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {

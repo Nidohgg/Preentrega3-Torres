@@ -7,29 +7,32 @@ carrito.length === 0 && console.log("El carrito se encuentra vacio!");
 //Se actualiza la lista del carrito
 actualizarListaCarrito();
 
-//array de Videojuegos a vender 
-const videojuegos = [
 
-    {nombre: "Kirby - Nintendo Switch", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego3.jpg"},
-    {nombre: "Star Wars JEDI Fallen the Fallen Order - PS5", precio: 28000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego2.jpg"},
-    {nombre: "Dead and Cells - Nintendo Switch", precio: 21000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego4.png"},
-    {nombre: "Uncharted 4 - PS4", precio: 19000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego5.jpg"},
-    {nombre: "Uncharted: A lost legacy - PS4", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego6.jpg"},
-    {nombre: "Far Cry 6 - XBOX ", precio: 23000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego7.jpg"},
-    {nombre: "CoD Modern Warfare III - PS4", precio: 20000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego8.jpg"},
-    {nombre: "Dragon Ball Sagas - PC", precio: 3000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/Juego1.jpg"},
-    {nombre: "Sifu PS5", precio: 26000, descripcion: "insertar descripcion",  img:"../multimedia/JUEGOS/Juego9.jpg"},
-    {nombre: "Bloodborne PS4", precio: 15000, descripcion: "insertar descripcion", img: "../multimedia/JUEGOS/juego10.jpg"},
-    {nombre: "Resident Evil 2 - PS4", precio: 25000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego11.jpg"},
-    {nombre: "Resident Evil Village PS5", precio: 26000, descripcion: "insertar descripcion", img:"../multimedia/JUEGOS/juego12.jpg"},
+function obtenerInformacionJuego(){
+    return new Promise( (resolve, reject) =>{
+        fetch('../JSON/productosJuegos.json')
+        .then(Response => {
+            if(!Response.ok){
+                throw new Error("Error al cargar la API, comunicate con tu administrador");
+            }
+            return Response.json();
+        })
+        .then(data => resolve(data))
+        .catch(error => reject(error));
+    })
+}
 
-]
+async function main(){
+    try{
+        const informacionJuego = await obtenerInformacionJuego()
+        //llamar a la funcion que crea la card y se le pasa como argumento informacionJuego
+        mostrarArticulos(informacionJuego);
+    }catch(error){
+        console.error("Error en la app", error)
+    }
+}
 
-
-//DESESTRUCTURACION DE OBJECTO VIDEOJUEGOS
-
-const {nombre, precio, descripcion, img} = videojuegos;
-
+main();
 
 function guardarCarritoLocalStorage(){
     //mandar al local
