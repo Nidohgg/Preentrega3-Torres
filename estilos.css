@@ -47,9 +47,9 @@
   background-position: center;
 }
 main {
+  display: flex;
   background-color: white;
   overflow:auto;
-  height: 100vh;
 
 }
 .form-control {
@@ -277,7 +277,7 @@ div form {
 }
 
 /*Media queries - INICIA*/
-@media screen and (min-width: 480px) and (max-width: 767)  {
+@media screen and (min-width: 480px) and (max-width: 768px)  {
   .cuadrila_varios {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -286,34 +286,42 @@ div form {
   .item {
     border: 1px solid white;
   }
-  main {
-    background-color: white;
-    height: 100vh;
+
+  p{
+    font-size: 17px;
+    margin: 10px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .collapse {
     display: flex;
     justify-content: flex-end;
   }
   #grilla {
     display: grid;
-    grid-template-areas: "titulo titulo titulo titulo titulo" "parrafo parrafo parrafo ifr ifr";
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 50px 400px;
+    grid-template-areas: "titulo titulo titulo titulo titulo"
+                         "parrafo parrafo parrafo ifr ifr";
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: 50px 80%;
   }
   #grilla h1 {
     grid-area: titulo;
   }
   #grilla p {
     grid-area: parrafo;
+    font-size: 20px;
     justify-self: center;
     align-self: center;
     text-align: center;
+    margin: 10px; 
   }
   #grilla iframe {
     grid-area: ifr;
+    padding-top: 10px;
+    padding-bottom: 10px;
     justify-self: center;
+
   }
   .jumbotron iframe {
     width: 400px;
@@ -330,10 +338,7 @@ div form {
   .item {
     border: 1px solid white;
   }
-  main {
-    display: grid;
-    height: 100vh;
-  }
+
 }
 @media screen and (min-width: 1024px) {
   .collapse {
@@ -342,24 +347,28 @@ div form {
   }
   #grilla {
     display: grid;
-    grid-template-areas: "titulo titulo titulo titulo titulo " "parrafo parrafo  ifr ifr ifr";
+    grid-template-areas: "titulo titulo titulo titulo titulo" 
+                          "parrafo parrafo parrafo ifr ifr";
     grid-template-columns: repeat(5, 2fr);
-    grid-template-rows: 50px 400px;
+    grid-template-rows: 20% 400px;
   }
   #grilla h1 {
     grid-area: titulo;
   }
   #grilla p {
     grid-area: parrafo;
+    font-size: 20px;
     justify-self: center;
     align-self: center;
     text-align: center;
+    margin-left: 20px;
   }
   #grilla iframe {
     grid-area: ifr;
     padding-top: 10px;
     padding-bottom: 10px;
     justify-self: center;
+    margin-right: 20px;
   }
   .jumbotron iframe {
     width: 90%;
@@ -367,9 +376,6 @@ div form {
   }
   .f2 {
     background-size: cover;
-  }
-  main {
-    height: 90vh;
   }
   .cuadrila_varios {
     display: grid;

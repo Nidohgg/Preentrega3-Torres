@@ -1,5 +1,7 @@
 console.log("Conectado");
 
+
+//Funcion para validar que el usuario ingrese solo letras en el formulario
 function validarNombre(){
 
     const nombreCompleto = document.getElementById("nombreCompleto").value;

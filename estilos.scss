@@ -277,7 +277,7 @@ div form{
         grid-template-areas:
             "titulo titulo titulo titulo titulo"
             "parrafo parrafo parrafo ifr ifr";
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 2fr);
         grid-template-rows: 50px 400px;
     }
 

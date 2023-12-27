@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "nombre": "DUALSHOCK PS4",
+        "precio": 60000,
+        "descripcion": "Mando ps4",
+        "img": "../multimedia/ACCESORIOS/Accesorio1.jpg"
+    },
+
+    {
+        "id":2,
+        "nombre": "Mando para PC",
+        "precio": 20000,
+        "descripcion": "Mando para PC",
+        "img": "../multimedia/ACCESORIOS/Accesorio2.jpg"
+    },
+
+    {
+        "id":3,
+        "nombre": "Control inalambrico para PC/PS4/Xbox",
+        "precio": 25000,
+        "descripcion": "Control inalambrico para PC/PS4/Xbox",
+        "img": "../multimedia/ACCESORIOS/Accesorio3.jpg"
+    },
+    {
+        "id":4,
+        "nombre": "DUALSHOCK PS5 - Camuflado",
+        "precio": 97000,
+        "descripcion": "Mando PS5",
+        "img": "../multimedia/ACCESORIOS/Accesorio4.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Control inalambrico Para Ps4 compatible con PC",
+        "precio": 33000,
+        "descripcion": "Control inalambrico",
+        "img": "../multimedia/ACCESORIOS/Accesorio5.jpg"
+    },
+    {
+        "id":6,
+        "nombre": "Teclado Mecanico Rosado",
+        "precio": 23000,
+        "descripcion": "Teclado Mecanico",
+        "img": "../multimedia/ACCESORIOS/Accesorio6.jpg"
+    },
+
+    {
+        "id": 7,
+        "nombre": "Teclado mecanico gamer luminoso RGB",
+        "precio": 20000,
+        "descripcion": "Teclado mecanico2",
+        "img": "../multimedia/ACCESORIOS/Accesorio7.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Teclado blanco Luminoso RGB",
+        "precio": 20000,
+        "descripcion": "Teclado",
+        "img": "../multimedia/ACCESORIOS/Accesorio8.jpg"
+    },
+
+    {
+        "id": 9,
+        "nombre": "Mouse negro X15",
+        "precio": 10000,
+        "descripcion": "Excelente periferico.",
+        "img": "../multimedia/ACCESORIOS/Accesorio9.jpg"
+    },
+
+    {
+        "id": 10,
+        "nombre": "Mouse Gamer",
+        "precio": 7000,
+        "descripcion": "Mouse Gamer",
+        "img": "../multimedia/ACCESORIOS/Accesorio10.jpg"
+    },
+
+    {
+        "id": 11,
+        "nombre": "Mouse Gamer Blanco con RGB",
+        "precio": 10000,
+        "descripcion": "Mouse blanco",
+        "img": "../multimedia/ACCESORIOS/Accesorio11.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Mouse gamer 2",
+        "precio": 60000,
+        "descripcion": "Mouse gamer 2",
+        "img": "../multimedia/ACCESORIOS/Accesorio12.jpg"
+    }
+]
