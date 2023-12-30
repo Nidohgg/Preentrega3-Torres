@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch1ps.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch2ps.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch3ps.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion": "",
+        "img": "../multimedia/MERCANCIAS/merch4ps.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch1xbox.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch2xbox.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch3xbox.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/mech4xobox.jpg"
+    },
+
+    {
+        "id": 9,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch1nin.jpg"
+    },
+
+    {
+        "id": 10,
+        "nombre": "",
+        "precio": 12000,
+        "descripcion":"",
+        "img": "../multimedia/MERCANCIAS/merch2nin.jpg"
+    }
+
+]

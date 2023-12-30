@@ -1,0 +1,88 @@
+[
+    {
+        "id": 1,
+        "nombre": "Parlante - Bluethoot",
+        "precio": 12000,
+        "descripcion":"Parlante 1",
+        "img": "../multimedia/AUDIOprod/audio1.jpg"
+    },
+
+    {
+        "id": 2,
+        "nombre":"Auriculares con cable para PC color negro",
+        "precio": 10000,
+        "descripcion":"Auriculares 1",
+        "img": "../multimedia/AUDIOprod/Audio2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre":"Auriculares con cable para PC color blanco",
+        "precio": 10000,
+        "descripcion":"auriculares 2",
+        "img": "../multimedia/AUDIOprod/Audio3.jpg"
+    },
+    {
+        "id": 4,
+        "nombre":"Auriculares a Bluethoot",
+        "precio": 8000,
+        "descripcion":"Auriculares 2",
+        "img": "../multimedia/AUDIOprod/Audio4.jpg"
+    },
+    {
+        "id": 5,
+        "nombre":"Auricular alambrico con microfono",
+        "precio": 13500,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio5.jpg"
+    },
+    {
+        "id": 6,
+        "nombre":"Parlante portatil con manija",
+        "precio": 30000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio6.jpg"
+    },
+    {
+        "id": 7,
+        "nombre":"Parlante portatil con manija",
+        "precio": 32000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio7.jpg"
+    },
+    {
+        "id": 8,
+        "nombre":"Parlante portatil con Bluethoot",
+        "precio": 33000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio8.jpg"
+    },
+    {
+        "id": 9,
+        "nombre":"Parlante portatil.",
+        "precio": 27000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio9.jpg"
+    },
+    {
+        "id": 10,
+        "nombre":"Barra de sonido",
+        "precio": 50000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio10.jpg"
+    },
+    {
+        "id": 11,
+        "nombre":"Juego completo - Equipo de Musica",
+        "precio": 78000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio11.jpg"
+    },
+    
+    {
+        "id": 12,
+        "nombre":"Auricular con Bluethoot Color Negro",
+        "precio": 18000,
+        "descripcion":"",
+        "img": "../multimedia/AUDIOprod/Audio12.jpg"
+    }
+]

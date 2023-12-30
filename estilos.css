@@ -47,7 +47,7 @@
   background-position: center;
 }
 main {
-  display: flex;
+  display: flexbox;
   background-color: white;
   overflow:auto;
 
@@ -339,6 +339,9 @@ div form {
     border: 1px solid white;
   }
 
+  main{
+    height: 90vh;
+  }
 }
 @media screen and (min-width: 1024px) {
   .collapse {
@@ -384,6 +387,10 @@ div form {
   }
   .item {
     border: 1px solid white;
+  }
+  
+  main{
+    height: 100vh;
   }
 }
 /*--------------------------------------------BOTON DE SUBIR-------------------------------------------------*/
